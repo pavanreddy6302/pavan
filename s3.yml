@@ -9,4 +9,4 @@
       s3_bucket:
         name: "{{ bucket_name }}"
         aws_region: "{{ aws_region }}"
-        state: present
+        state: absent
