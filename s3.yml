@@ -1,0 +1,12 @@
+---
+- name: Create an S3 bucket
+  hosts: localhost
+  vars:
+    bucket_name: "awx-bucket-one"
+    aws_region: "us-west-1"
+  tasks:
+    - name: Create the S3 bucket
+      s3_bucket:
+        name: "{{ bucket_name }}"
+        aws_region: "{{ aws_region }}"
+        state: present
